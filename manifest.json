@@ -1,0 +1,44 @@
+{
+  "name": "Jirrit",
+  "version": "1.0",
+  "author": "KDachev",
+  "manifest_version": 3,
+  "short_name": "Jirrit",
+  "description": "JIRA to Gerrit Link",
+  "icons": {
+    "16": "media/icon16.png",
+    "48": "media/icon48.png",
+    "128": "media/icon128.png"
+  },
+  "action": {},
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; connect-src http://* data: blob: filesystem:;"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.atlassian.net/*"],
+      "css": ["css/jirrit.css"],
+      "js": ["lib/jirrit.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*/*",
+	"http://*/*"
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "css/*",
+      "lib/*",
+      "media/*"
+    ],
+    "matches": ["*://*.atlassian.net/*"]
+  }],
+
+  "background": {
+    "service_worker": "lib/background.js"
+  }
+}

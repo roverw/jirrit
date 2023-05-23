@@ -1,0 +1,198 @@
+/* Popup */
+
+#gerrit-jira-popup {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: gerrit-jira-appear;
+    background: rgba(255, 255, 255, 1);
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    font-size: 12px;
+    min-height: 30px;
+    min-width: 400px;
+    position: fixed;
+    right: 30px;
+    top: 70px;
+    z-index: 999999;
+}
+
+@keyframes gerrit-jira-appear {
+    from {
+        top: 80px;
+        background: rgba(255, 255, 255, 1);
+    }
+    to {
+        top: 70px;
+        background: rgba(255, 255, 255, 1);
+    }
+}
+
+.gerrit-jira-popup-content {
+    padding: 15px 25px;
+}
+
+.gerrit-jira-popup-content tbody {
+    border: none !important;
+}
+
+.gerrit-jira-popup-content a,
+.gerrit-jira-popup-content a:hover,
+.gerrit-jira-popup-content a:visited,
+.gerrit-jira-popup-content a:active,
+.gerrit-jira-popup-content a:link 
+.gerrit-jira-popup-content a:focus {
+    user-select: none;
+    text-decoration: none !important;
+    outline: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* Titles */
+
+.gerrit-jira-title {
+    padding-top: 4px;
+    color: rgb(48, 48, 48);
+}
+
+.gerrit-jira-settings-title-icon {
+    height: 15px;
+    width: 15px;
+    padding-right: 4px;
+}
+
+.gerrit-jira-settings-title-text {
+    position: relative;
+    bottom: 3px;
+}
+
+
+/* Gerrit Changes */
+
+.gerrit-jira-change {
+    padding: 5px 0;
+}
+
+.gerrit-jira-change-link {
+    padding-right: 5px;
+}
+
+.gerrit-jira-change-repo {
+    color: rgb(124, 124, 124);
+}
+
+.gerrit-jira-change-status {
+    color: rgb(100, 100, 100);
+    text-align: right;
+}
+
+.gerrit-jira-change-insertions {
+    color: green;
+    padding-right: 3px;
+    text-align: right;
+}
+
+.gerrit-jira-change-deletions {
+    color: red;
+    text-align: right;
+}
+
+
+/* Settings */
+
+.gerrit-jira-settings-panel {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.gerrit-jira-gerrit-host-label {
+    position: relative;
+    bottom: 2px;
+    padding-right: 4px;
+}
+
+#gerrit-jira-gerrit-host-input {
+    border-radius: 4px;
+    border: 1px solid grey;
+    padding: 2px;
+    margin-right: 8px;
+    position: relative;
+    bottom: 2px;
+    text-align: center;
+}
+
+
+/* Icons */
+
+.gerrit-jira-gerrit-icon {
+    padding-right: 3px;
+}
+
+.gerrit-jira-debug-icon-img,
+.gerrit-jira-search-icon-img
+{
+    height: 12px;
+    margin-right: 2px;
+}
+
+
+/* Gerrit Request Status */
+
+.gerrit-jira-recent-status {
+    margin: 2px 0px 0px 5px;
+}
+
+.gerrit-jira-status-icon-img {
+    height: 10px;
+    margin-right: 2px;
+}
+
+.gerrit-jira-status-hint {
+    margin-left: 10px;
+}
+
+
+/* Buttons */
+
+.gerrit-jira-close-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.gerrit-jira-close-button-img {
+    height: 10px;
+    padding: 2px 4px;
+}
+
+.gerrit-jira-settings-button {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.gerrit-jira-settings-button-img {
+    height: 10px;
+    padding: 2px 4px;
+}
+
+.gerrit-jira-settings-submit-button {
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    background-color: rgb(0, 82, 204);
+    color:#FFFFFF;
+    border: 0px;
+    position: relative;
+    bottom: 2px;
+    font-size: 12px;
+}
+
+.gerrit-jira-settings-submit-button:hover {
+    background-color: rgb(29, 104, 216);
+}
